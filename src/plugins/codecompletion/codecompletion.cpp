@@ -2530,6 +2530,7 @@ void CodeCompletion::OnParserEnd(wxCommandEvent& event)
         if (   m_CCEnableHeaders
             && !m_SystemHeadersThreads.empty()
             && !m_SystemHeadersThreads.front()->IsRunning()
+            && m_SystemHeadersThreads.front()->IsAlive()
             && m_NativeParser.Done() )
         {
             m_SystemHeadersThreads.front()->Run();
