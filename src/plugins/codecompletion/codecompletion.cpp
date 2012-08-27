@@ -62,7 +62,7 @@
 #include "doxygen_parser.h" // for DocumentationPopup and DoxygenParser
 #include "gotofunctiondlg.h"
 
-#define CC_CODECOMPLETION_DEBUG_OUTPUT 0
+#define CC_CODECOMPLETION_DEBUG_OUTPUT 1
 
 // let the global debug macro overwrite the local debug macro value
 #if defined(CC_GLOBAL_DEBUG_OUTPUT)
