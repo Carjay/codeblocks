@@ -62,7 +62,7 @@
 #include "parser/tokenizer.h"
 #include "doxygen_parser.h" // for DocumentationPopup and DoxygenParser
 
-#define CC_CODECOMPLETION_DEBUG_OUTPUT 0
+#define CC_CODECOMPLETION_DEBUG_OUTPUT 1
 
 #if defined(CC_GLOBAL_DEBUG_OUTPUT)
     #if CC_GLOBAL_DEBUG_OUTPUT == 1
