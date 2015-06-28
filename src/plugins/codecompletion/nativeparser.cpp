@@ -489,6 +489,12 @@ wxArrayString NativeParser::GetAllPathsByFilename(const wxString& filename)
         if (project)
         {
             const wxString prjPath = project->GetCommonTopLevelPath();
+            if (prjPath == _T("/"))
+            {
+                // I'm outta here... FIXME: why do we get '/' (seems to have to do with cmake not properly updating the project file)
+                CCLogger::Get()->DebugLog(_T("NativeParser::GetAllPathsByFilename(): CommonTopLevelPath reported as '/' so ignored'"));
+                return dirs;
+            }
             wxString priorityPath;
             if (fn.HasExt() && (fn.GetExt().StartsWith(_T("h")) || fn.GetExt().StartsWith(_T("c"))))
             {
