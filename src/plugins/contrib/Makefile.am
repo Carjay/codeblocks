@@ -50,9 +50,10 @@ if BUILD_ENVVARS
 MAYBE_ENVVARS=envvars
 endif
 
-if BUILD_FILEMANAGER
-MAYBE_FILEMANAGER=FileManager
-endif
+# crashes the compiler(!) when trying to include the sdk.h
+#if BUILD_FILEMANAGER
+#MAYBE_FILEMANAGER=FileManager
+#endif
 
 if BUILD_HELP
 MAYBE_HELP=help_plugin
